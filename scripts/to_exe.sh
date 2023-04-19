@@ -1,0 +1,1 @@
+pyinstaller --onefile src/__init__.py -n exe_name_here
