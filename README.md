@@ -15,7 +15,7 @@ wally-update major
 ```
 
 ## limitations
-Currently this only works with version strings containing an @ symbol, and doesn't have a tag at the end (aka no "0.1.0-alpha" or anything).
+Currently this only works with version strings containing an @ / ^@ symbol, and doesn't have a tag at the end (aka no "0.1.0-alpha" or anything).
 
 ## conclusion
 Enjoy! If this helps you consider sponsoring my github page. 
