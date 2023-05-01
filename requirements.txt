@@ -2,8 +2,6 @@ altgraph==0.17.3
 dpath==2.1.5
 gitdb==4.0.10
 GitPython==3.1.31
-mypy==1.2.0
-mypy-extensions==1.0.0
 pefile==2023.2.7
 pyinstaller==5.10.1
 pyinstaller-hooks-contrib==2023.2
