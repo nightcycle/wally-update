@@ -113,16 +113,20 @@ def get_wally_index() -> dict[str, dict[str, list[WallyPackageData]]]:
 		return out
 
 def get_best_path(package_path: str, upgrade_focus: UpgradeFocus, wally_index: dict[str, dict[str, list[WallyPackageData]]]) -> str:
-	if not "@" in package_path:
+	marker = "@^"
+	if not marker in package_path:
+		marker = "@"
+	
+	if not marker in package_path:
 		return package_path
 
-	if "-" in package_path.split("@")[1]:
+	if "-" in package_path.split(marker)[1]:
 		return package_path
 
-	address = package_path.split("@")[0]
+	address = package_path.split(marker)[0]
 	domain = address.split("/")[0]
 	package_name = address.split("/")[1]
-	version_str = (package_path.split("@")[1])
+	version_str = (package_path.split(marker)[1])
 	values = version_str.split(".")
 	major = int(values[0])
 	minor = int(values[1])
